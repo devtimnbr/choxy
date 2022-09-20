@@ -1,5 +1,13 @@
 import { Context } from "hono";
 
+/*
+ * Getter
+ */
+export const getProxyUrl = (_url: string, subPath = "/") => {
+  const url = new URL(_url);
+  return url.pathname.replace(subPath, "https://") + url.search;
+};
+
 export const getDuration = (durationString: string): any => {
   const timeFormat = durationString.slice(durationString.length - 1);
   let duration = Number(durationString.slice(0, -1));
@@ -33,6 +41,9 @@ export const getDuration = (durationString: string): any => {
   return duration;
 };
 
+/*
+ * Init headers
+ */
 export const initProxyHeaders = (c: Context) => {
   let init = {
     headers: {} as any,

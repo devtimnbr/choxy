@@ -1,15 +1,15 @@
 import { Context, Hono } from "hono";
-import { getDuration, initProxyHeaders, initResponseHeaders } from "./utils";
+import {
+  getProxyUrl,
+  getDuration,
+  initProxyHeaders,
+  initResponseHeaders,
+} from "./utils";
 
 const app = new Hono();
 
 const CORS_ORIGINS = "*";
 const FONT_HOSTNAME = "fonts.gstatic.com";
-
-const getProxyUrl = (_url: string, subPath = "/") => {
-  const url = new URL(_url);
-  return url.pathname.replace(subPath, "https://") + url.search;
-};
 
 const chacheProxyRequest = async (
   c: Context<any>,
