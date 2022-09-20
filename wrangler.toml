@@ -1,0 +1,6 @@
+name = "choxy"
+main = "src/index.ts"
+compatibility_date = "2022-09-06"
+
+[vars]
+WORKER_DOMAIN = "your.domain.com/"
