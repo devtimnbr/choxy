@@ -1,6 +1,6 @@
 # Choxy
 
-Choxy is a cloudflare workers cache proxy built on top of [hono](https://github.com/honojs/hono). It is usefull to cache external and optimized images, google fonts or kind of web requests.
+Choxy is a cloudflare workers cache proxy built on top of [hono](https://github.com/honojs/hono). It is usefull to cache external and optimized images, google fonts or all kinds of web requests.
 
 ## Proxy Endpoints
 
